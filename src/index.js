@@ -1,6 +1,7 @@
-import { home } from "./pages/home.js";
-import { menu } from "./pages/menu.js";
-import { about } from "./pages/about.js";
+import home from "./pages/home.js";
+import menu from "./pages/menu.js";
+import about from "./pages/about.js";
+// import createElement from "./element.js";
 import "./styles.css"
 
 const app = document.querySelector("#content")
@@ -11,14 +12,17 @@ nav.addEventListener("click", (e) => {
         console.log("clicked", e.target.id);
         switch (e.target.id) {
             case "home":
-                app.textContent = home
-                break;
+                app.textContent = ""
+                app.appendChild(home)
+                break
             case "menu":
-                app.textContent = menu
-                break;
+                app.textContent = ""
+                app.appendChild(menu)
+                break
             case "about":
-                app.textContent = about
-                break;
+                app.textContent = ""
+                app.appendChild(about)
+                break
             default:
                 break;
         }
