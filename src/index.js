@@ -1,9 +1,14 @@
+import header from "./pages/header.js"
 import home from "./pages/home.js"
 import menu from "./pages/menu.js"
 import about from "./pages/about.js"
 import "./styles.css"
 
-const app = document.querySelector("#content")
+const body = document.querySelector("body")
+
+body.appendChild(header())
+body.appendChild(home())
+
 const nav = document.querySelector("nav")
 
 nav.addEventListener("click", (e) => {
@@ -11,16 +16,16 @@ nav.addEventListener("click", (e) => {
     console.log("clicked", e.target.id)
     switch (e.target.id) {
       case "home":
-        app.textContent = ""
-        app.appendChild(home)
+        document.getElementById("app").remove()
+        body.appendChild(home())
         break
       case "menu":
-        app.textContent = ""
-        app.appendChild(menu)
+        document.getElementById("app").remove()
+        body.appendChild(menu())
         break
       case "about":
-        app.textContent = ""
-        app.appendChild(about)
+        document.getElementById("app").remove()
+        body.appendChild(about())
         break
       default:
         break
