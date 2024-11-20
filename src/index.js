@@ -1,7 +1,6 @@
 import home from "./pages/home.js"
 import menu from "./pages/menu.js"
 import about from "./pages/about.js"
-// import createElement from "./element.js";
 import "./styles.css"
 
 const app = document.querySelector("#content")
