@@ -1,4 +1,9 @@
-function el(tag, attrs, ...children) {
+function el(tag, attrs = {}, children = []) {
+  if (attrs instanceof Array) {
+    children = attrs
+    attrs = {}
+  }
+
   return {
     tag,
     attrs,

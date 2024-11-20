@@ -1,3 +1,61 @@
 body {
-  background-color: rebeccapurple;
+  background-color: #2e3440;
+  color: #eceff4;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+a {
+  color: #eceff4;
+  text-decoration: none;
+}
+
+a.recipe {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+img,
+#app {
+  border-radius: 10px;
+}
+
+button {
+  background: #d8dee9;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #4c566a;
+  cursor: pointer;
+}
+
+.flex-el {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0;
+}
+
+#app {
+  margin: 50px;
+  padding: 50px;
+  background: #3b4252;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
