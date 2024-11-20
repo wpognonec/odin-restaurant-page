@@ -1,6 +1,16 @@
+:root {
+  --font-color: #4c4f69;
+  --input-background: #ccd0da;
+  --button-color: #d8dee9;
+  --button-hover-color: #dc8a78;
+  --app-background: #eff1f5;
+  --body-background: #dce0e8;
+}
+
 body {
-  background-color: #2e3440;
-  color: #eceff4;
+  margin-top: 30px;
+  background-color: var(--body-background);
+  color: var(--font-color);
   font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
 }
@@ -14,7 +24,7 @@ nav {
 }
 
 a {
-  color: #eceff4;
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -25,7 +35,7 @@ a.recipe {
 }
 
 .active {
-  background: #4c566a;
+  background: var(--button-hover-color);
 }
 
 img,
@@ -38,7 +48,8 @@ nav > button {
 }
 
 button {
-  background: #d8dee9;
+  color: var(--font-color);
+  background: var(--button-color);
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -46,31 +57,37 @@ button {
 }
 
 button:hover {
-  background: #4c566a;
+  background: var(--button-hover-color);
   cursor: pointer;
 }
 
 .flex-el {
   display: flex;
   flex-direction: column;
-  /* flex: 0;
-  width: 300px; */
 }
 
 #app {
   margin: 50px;
   padding: 50px;
-  background: #3b4252;
+  background: var(--app-background);
 }
 
 .flex {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .flex-row {
   display: flex;
+  /* gap: 30px; */
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.gap30 {
   gap: 30px;
 }
 
@@ -83,8 +100,8 @@ form > button {
 }
 
 input {
-  background: #4c566a;
-  color: #eceff4;
+  background: var(--input-background);
+  color: var(--font-color);
   border: none;
   border-radius: 5px;
   padding-left: 10px;
@@ -92,11 +109,28 @@ input {
 }
 
 textarea {
-  background: #4c566a;
-  color: #eceff4;
+  background: var(--input-background);
+  color: var(--font-color);
   height: 200px;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   resize: none;
+}
+
+svg {
+  color: "red";
+}
+
+#recipe {
+  border-bottom: 1px solid #dc8a78;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  #recipe {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
